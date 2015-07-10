@@ -25,7 +25,6 @@ import time
 from cherrypy.process.plugins import BackgroundTask
 from collections import defaultdict
 
-from wok import netinfo
 from wok.basemodel import Singleton
 from wok.exception import InvalidOperation, InvalidParameter
 from wok.exception import NotFoundError, OperationFailed
@@ -34,6 +33,7 @@ from wok.xmlutils.utils import xpath_get_text
 
 import hostdev
 from .. import disks
+from .. import netinfo
 from ..repositories import Repositories
 from ..swupdate import SoftwareUpdate
 from config import CapabilitiesModel

@@ -28,7 +28,6 @@ import unittest
 import uuid
 
 import wok.objectstore
-from wok import netinfo
 from wok.basemodel import Singleton
 from wok.config import config
 from wok.exception import InvalidOperation
@@ -36,6 +35,7 @@ from wok.exception import InvalidParameter, NotFoundError, OperationFailed
 from wok.rollbackcontext import RollbackContext
 from wok.utils import add_task
 
+from wok.plugins.kimchi import netinfo
 from wok.plugins.kimchi.osinfo import get_template_default
 from wok.plugins.kimchi.model import model
 from wok.plugins.kimchi.model.libvirtconnection import LibvirtConnection
