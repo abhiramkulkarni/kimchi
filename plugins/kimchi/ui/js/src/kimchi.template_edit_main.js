@@ -47,7 +47,7 @@ kimchi.template_edit_main = function() {
         var vncOpt = [{label: 'VNC', value: 'vnc'}];
         $('#template-edit-graphics').append('<option selected>VNC</option>');
         $('#template-edit-graphics').append('<option>Spice</option>');
-        kimchi.select('template-edit-graphics-list', vncOpt);
+        wok.select('template-edit-graphics-list', vncOpt);
         var enableSpice = function() {
             if (kimchi.capabilities == undefined) {
                 setTimeout(enableSpice, 2000);
@@ -55,7 +55,7 @@ kimchi.template_edit_main = function() {
             }
             if (kimchi.capabilities.qemu_spice == true) {
                 spiceOpt = [{label: 'Spice', value: 'spice'}]
-                kimchi.select('template-edit-graphics-list', spiceOpt);
+                wok.select('template-edit-graphics-list', spiceOpt);
             }
         };
         enableSpice();

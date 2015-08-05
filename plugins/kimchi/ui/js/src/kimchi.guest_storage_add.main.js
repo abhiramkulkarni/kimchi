@@ -69,7 +69,7 @@ kimchi.guest_storage_add_main = function() {
                         });
                     }
                 });
-                kimchi.select('guest-add-storage-pool-list', options);
+                wok.select('guest-add-storage-pool-list', options);
         }
     });
 
@@ -117,7 +117,7 @@ kimchi.guest_storage_add_main = function() {
         poolTextbox.change();
     }
     var selectType = $(typeTextbox).val();
-    kimchi.select('guest-storage-type-list', types);
+    wok.select('guest-storage-type-list', types);
 
     var validateCDROM = function(settings) {
         if (/^((https|http|ftp|ftps|tftp|\/).*)+$/.test(settings['path']))

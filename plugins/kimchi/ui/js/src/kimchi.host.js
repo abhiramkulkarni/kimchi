@@ -78,7 +78,7 @@ kimchi.host_main = function() {
                     'class': 'repository-baseurl'
                 }];
         }
-        repositoriesGrid = new kimchi.widget.Grid({
+        repositoriesGrid = new wok.widget.Grid({
             container: 'repositories-grid-container',
             id: 'repositories-grid',
             title: i18n['KCHREPO6003M'],
@@ -205,7 +205,7 @@ kimchi.host_main = function() {
     };
 
     var initSoftwareUpdatesGrid = function(softwareUpdates) {
-        softwareUpdatesGrid = new kimchi.widget.Grid({
+        softwareUpdatesGrid = new wok.widget.Grid({
             container: 'software-updates-grid-container',
             id: softwareUpdatesGridID,
             title: i18n['KCHUPD6001M'],
@@ -296,7 +296,7 @@ kimchi.host_main = function() {
         });
     };
     var initReportGrid = function(reports) {
-        reportGrid = new kimchi.widget.Grid({
+        reportGrid = new wok.widget.Grid({
             container: 'available-reports-grid-container',
             id: reportGridID,
             title: i18n['KCHDR6002M'],
@@ -803,22 +803,22 @@ kimchi.host_main = function() {
         }
 
         var trackedCharts = {
-            cpu: new kimchi.widget.LineChart({
+            cpu: new wok.widget.LineChart({
                 id: 'chart-cpu',
                 node: 'container-chart-cpu',
                 type: 'percent'
             }),
-            memory: new kimchi.widget.LineChart({
+            memory: new wok.widget.LineChart({
                 id: 'chart-memory',
                 node: 'container-chart-memory',
                 type: 'value'
             }),
-            diskIO: new kimchi.widget.LineChart({
+            diskIO: new wok.widget.LineChart({
                 id: 'chart-disk-io',
                 node: 'container-chart-disk-io',
                 type: 'value'
             }),
-            networkIO: new kimchi.widget.LineChart({
+            networkIO: new wok.widget.LineChart({
                 id: 'chart-network-io',
                 node: 'container-chart-network-io',
                 type: 'value'

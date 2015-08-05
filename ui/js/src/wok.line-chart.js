@@ -17,13 +17,13 @@
  */
 
 /**
- * new kimchi.widget.LineChart({
+ * new wok.widget.LineChart({
  *   node: 'line-chart-cpu',
  *   id: 'line-chart',
  *   type: 'value'
  * });
  */
-kimchi.widget.LineChart = function(params) {
+wok.widget.LineChart = function(params) {
     var container = $('#' + params['node']);
     container.addClass('chart-container');
     var height = container.height();
