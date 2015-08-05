@@ -88,10 +88,6 @@ AC_CONFIG_FILES([
     ui/images/Makefile
     ui/images/theme-default/Makefile
     ui/js/Makefile
-    ui/libs/Makefile
-    ui/libs/themes/Makefile
-    ui/libs/themes/base/Makefile
-    ui/libs/themes/base/images/Makefile
     ui/spice-html5/Makefile
     ui/spice-html5/css/Makefile
     ui/spice-html5/pages/Makefile
