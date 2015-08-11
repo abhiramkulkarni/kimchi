@@ -129,7 +129,8 @@ class ModelTests(unittest.TestCase):
             inst.templates_create(params)
             rollback.prependDefer(inst.template_delete, 'test')
 
-            params = {'name': 'kimchi-vm', 'template': '/plugins/kimchi/templates/test'}
+            params = {'name': 'kimchi-vm',
+                      'template': '/plugins/kimchi/templates/test'}
             task = inst.vms_create(params)
             rollback.prependDefer(inst.vm_delete, 'kimchi-vm')
             inst.task_wait(task['id'], 10)
@@ -302,7 +303,8 @@ class ModelTests(unittest.TestCase):
             self.assertEquals('127.0.0.1', info['graphics']['listen'])
 
             graphics = {'type': 'spice', 'listen': '127.0.0.1'}
-            params = {'name': 'kimchi-spice', 'template': '/plugins/kimchi/templates/test',
+            params = {'name': 'kimchi-spice',
+                      'template': '/plugins/kimchi/templates/test',
                       'graphics': graphics}
             task2 = inst.vms_create(params)
             inst.task_wait(task2['id'])
@@ -481,8 +483,10 @@ class ModelTests(unittest.TestCase):
                       'cdrom': old_distro_iso}
             inst.templates_create(params)
             rollback.prependDefer(inst.template_delete, 'old_distro_template')
-            params = {'name': vm_name,
-                   'template': '/plugins/kimchi/templates/old_distro_template'}
+            params = {
+                'name': vm_name,
+                'template': '/plugins/kimchi/templates/old_distro_template'
+            }
             task2 = inst.vms_create(params)
             inst.task_wait(task2['id'])
             rollback.prependDefer(inst.vm_delete, vm_name)
@@ -925,10 +929,14 @@ class ModelTests(unittest.TestCase):
                            objstore_loc=self.tmp_store)
 
         with RollbackContext() as rollback:
-            params = {'name': 'test', 'disks': [], 'cdrom': UBUNTU_ISO,
-                      'storagepool': '/plugins/kimchi/storagepools/default-pool',
-                      'domain': 'test',
-                      'arch': 'i686'}
+            params = {
+                'name': 'test',
+                'disks': [],
+                'cdrom': UBUNTU_ISO,
+                'storagepool': '/plugins/kimchi/storagepools/default-pool',
+                'domain': 'test',
+                'arch': 'i686'
+            }
 
             inst.templates_create(params)
             rollback.prependDefer(inst.template_delete, 'test')
