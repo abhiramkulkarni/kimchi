@@ -36,6 +36,7 @@ from wok.utils import add_task, convert_data_size, get_next_clone_name
 from wok.utils import import_class, run_setfacl_set_attr, wok_log
 from wok.xmlutils.utils import xpath_get_text, xml_item_update
 from wok.xmlutils.utils import dictize
+from wok.model.tasks import TaskModel
 
 from .. import model
 from .. import vnc
@@ -45,7 +46,6 @@ from ..screenshot import VMScreenshot
 from ..utils import template_name_from_uri
 from ..xmlutils.cpu import get_cpu_xml, get_numa_xml
 from config import CapabilitiesModel
-from tasks import TaskModel
 from templates import TemplateModel
 from utils import get_vm_name
 from utils import get_metadata_node
